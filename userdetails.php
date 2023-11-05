@@ -11,6 +11,7 @@ if (!isset($_SESSION['LoggedIn']) || $_SESSION['LoggedIn'] !== true) {
     exit;
 }
 
+//metode get amb parametre id
 if (isset($_GET['id'])) {
     $userId = $_GET['id'];
 
@@ -31,6 +32,10 @@ if (isset($_GET['id'])) {
         echo "Contrasenya: " . $user['password'] . "<br>";
         echo "ID: " . $user['user_id'] . "<br>";
         echo "Actiu: " . $user['active'] . "<br>";
+
+        echo '<p><a href="dashboard.php">Tornar a Dashboard</a></p>';
+        
+      
 
     } else {
         echo "Usuari no trobat.";
